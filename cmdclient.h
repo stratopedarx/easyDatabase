@@ -11,10 +11,10 @@ class Server;
 class CMDClient
 {
 private:
-    Server* pServer;    // the pointer on the related server
-    std::string rawCMD;
+    Server* pServer;    // the pointer on the linked server
     Request lastReq;
     Answer lastAnsw;
+    std::string rawCMD;
     void readCMD();
     void parseCMD();
     void handleReq();
@@ -24,7 +24,6 @@ public:
     void setServer(Server* s);
     Server* getServer();
     Answer typeCMD();
-
 };
 
 #endif // CMDCLIENT_H

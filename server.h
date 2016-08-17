@@ -12,15 +12,14 @@ typedef std::pair<std::string, std::string> Record;
 
 class Server
 {
-
     std::string dbFilePath;
     std::vector<Record> data;
     void readFile();
     void writeFile();
     bool keyExists(std::string key);
-    void addRecord(Record);
-    Record findRecord(std::string key);
-    void removeRecord(std::string key);
+    void addRecord(Record);             // add record to the data/DataBase
+    Record findRecord(std::string key); // find needed record in the data
+    void removeRecord(std::string key); // remove the record from the data
 
 public:
     Server(std::string path);
