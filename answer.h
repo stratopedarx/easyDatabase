@@ -11,7 +11,6 @@ enum class AnswerType{
     NON
 };
 
-
 class Answer
 {
 public:

@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include "answer.h"
 #include "cmdclient.h"
 

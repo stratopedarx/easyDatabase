@@ -6,11 +6,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    Server server("db.txt");    // cteate server
+    Server server("/home/stratopedarx/Documents/niit/po/labs/DataBase/c_plus/DataBase/data.txt");    // cteate server
     CMDClient client(&server);  // create client with server
-    //client.setServer(&server);
 
-    Answer answ = client.typeCMD();
-    std::cout << (int)answ.answer << ":" << (int)answ.request << "=" << answ.value;
+    while('loop')
+    {
+        Answer answ = client.typeCMD();
+        std::cout << (int)answ.answer << ":" << (int)answ.request << "=" << answ.value;
+    }
     return 0;
 }
