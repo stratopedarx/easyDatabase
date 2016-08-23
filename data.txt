@@ -1,0 +1,7 @@
+sergey=lobanov
+irina=konv
+cat=dog
+baba=nana
+lala=nana
+oo=pp
+kaka=lala

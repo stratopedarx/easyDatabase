@@ -22,7 +22,7 @@ void Server::readFile()
     {
         getline(fin,tempStr);
         if(tempStr == "") continue;
-        std::cout << tempStr << std::endl;
+        //std::cout << tempStr << std::endl;
         int keyPosition = tempStr.find("=");
         data.push_back(make_pair(
                            tempStr.substr(0, keyPosition),
@@ -90,8 +90,8 @@ void Server::removeRecord(std::string key)
     for(iter = data.begin(); iter != data.end(); ++iter)
         if(iter->first == key)
         {
-            data.erase(iter);
             std::cout << "REMOVE:" << key << std::endl;
+            return;
         }
 }
 
@@ -167,5 +167,11 @@ Answer Server::exec(Request r)
             std::cout << "ERROR: unknown CMD" << std::endl;
             break;
     }
+    eraseData();
     return answer;
+}
+
+void Server::eraseData()
+{
+    data.erase(data.begin(), data.end());   // clean(erase) the data
 }

@@ -21,6 +21,7 @@ class Server
     void addRecord(Record);             // add record to the data/DataBase
     Record findRecord(std::string key); // find needed record in the data
     void removeRecord(std::string key); // remove the record from the data
+    void eraseData();
 
 public:
     Server(std::string path);
